@@ -1,0 +1,1 @@
+chrome.devtools.panels.create("XSS Encode", "icon48.png", "encode.html", function (panel) {});

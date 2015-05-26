@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <!-- <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"> -->
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="js/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="js/bootstrap.min.js"></script>
+    <title>XSS - 编码解码</title>
+    <style>
+        .tab-content > .tab-pane > textarea {
+            width: 100%;
+            margin: 5px 0px 5px 0px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li role="presentation" class="active"><a href="#en" aria-controls="en" role="tab" data-toggle="tab">编码</a></li>
+            <li role="presentation"><a href="#de" aria-controls="de" role="tab" data-toggle="tab">解码</a></li>
+        </ul>
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="en">
+                <textarea id="encode" class="form-control" rows="5"></textarea>
+                <button type="button" class="btn btn-primary" name="url" leixing="jiami">URL</button>
+                <button type="button" class="btn btn-primary" name="html10" leixing="jiami">HTML10HEX</button>
+                <button type="button" class="btn btn-primary" name="html16" leixing="jiami">HTML16HEX</button>
+                <button type="button" class="btn btn-primary" name="jsunicode" leixing="jiami">JSunicode</button>
+                <button type="button" class="btn btn-primary" name="js16" leixing="jiami">JS16HEX</button>
+                <button type="button" class="btn btn-primary" name="js8" leixing="jiami">JS8HEX</button>
+                <button type="button" class="btn btn-primary" name="base64" leixing="jiami">base64</button>
+                <textarea id="encode_result" class="form-control" rows="5"></textarea>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="de">
+                <textarea id="decode" class="form-control" rows="5"></textarea>
+                <button type="button" class="btn btn-primary" name="url" leixing="jiemi">URL</button>
+                <button type="button" class="btn btn-primary" name="html10" leixing="jiemi">HTML10HEX</button>
+                <button type="button" class="btn btn-primary" name="html16" leixing="jiemi">HTML16HEX</button>
+                <button type="button" class="btn btn-primary" name="jsunicode" leixing="jiemi">JSunicode</button>
+                <button type="button" class="btn btn-primary" name="js16" leixing="jiemi">JS16HEX</button>
+                <button type="button" class="btn btn-primary" name="js8" leixing="jiemi">JS8HEX</button>
+                <button type="button" class="btn btn-primary" name="base64" leixing="jiemi">base64</button>
+                <textarea id="decode_result" class="form-control" rows="5"></textarea>
+            </div>
+        </div>
+    </div>
+    <p>xss测试编码工具 By:0x_Jin</p>
+    <p>样式修改 By:xiayudashan</p>
+</div>
+
+<script type="text/javascript" src="bianma.js"></script>
+</body>
+</html>
